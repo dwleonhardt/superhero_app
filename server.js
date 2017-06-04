@@ -10,6 +10,14 @@ app.get('/', function(req,res,next){
   })
 })
 
+app.get('/:id', function(req,res,next){
+  knex('hero')
+  .where('id', req.params.id)
+  .then(function(data){
+    res.send(data);
+  })
+})
+
 app.listen(port, function(){
   console.log(`listening on port ${port}`);
 });
