@@ -44,6 +44,15 @@ app.patch('/:id', function(req,res,next){
   })
 })
 
+app.delete('/:id', function(req,res,next){
+  knex('hero')
+  .where('id', req.params.id)
+  .del()
+  .then(function(data){
+    res.send(`${data} record(s) deleted`);
+  })
+})
+
 app.listen(port, function(){
   console.log(`listening on port ${port}`);
 });
