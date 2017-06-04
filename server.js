@@ -4,7 +4,10 @@ var port = process.env.PORT || 3000;
 var knex = require('./knex');
 
 app.get('/', function(req,res,next){
-  res.send('hello world!');
+  knex('hero')
+  .then(function(data){
+    res.send(data);
+  })
 })
 
 app.listen(port, function(){
