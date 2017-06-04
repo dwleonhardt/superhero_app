@@ -35,6 +35,15 @@ app.post('/', function(req,res,next){
   })
 })
 
+app.patch('/:id', function(req,res,next){
+  knex('hero')
+  .where('id', req.params.id)
+  .update(req.body, '*')
+  .then(function(data){
+    res.send(data);
+  })
+})
+
 app.listen(port, function(){
   console.log(`listening on port ${port}`);
 });
