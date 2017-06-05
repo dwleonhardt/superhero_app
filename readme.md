@@ -17,4 +17,4 @@ This app is a simple express server app with get/post/patch/delete routes for a 
 - [Express Setup](https://youtu.be/iHorRriIID4)
 - [Knex Setup](https://youtu.be/NRaKl0wqDZQ)
 - [Migrations](https://youtu.be/ASIxnJ4nRyg)
-- [Seeds](https://youtu.be/-XC_5XhpPPQ)
+- [Seeds](https://youtu.be/48KJ5HUY6NE)
